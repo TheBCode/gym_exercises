@@ -1,6 +1,6 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import {Stack, Divider} from '@mui/material';
+import {Stack} from '@mui/material';
 
 import Logo from '../assets/images/Logo.png';
 
@@ -26,8 +26,12 @@ const Navbar = () => {
                 }}>Home</Link>
                 <a href="#exercises" style={{
                     textDecoration: 'none',
-                    color: '#3A1212'
+                    color: '#3A1212',
                 }}>Exercises</a>
+                <Link to="/auth" style={{
+                    textDecoration: 'none',
+                    color: '#3A1212'
+                }}>Login</Link>
             </Stack>
         </Stack>
     );

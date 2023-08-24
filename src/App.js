@@ -7,6 +7,7 @@ import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import ExerciseDetail from './pages/ExerciseDetail';
 import Footer from './components/Footer';
+import {Auth} from "./components/Auth";
 
 const App = () => {
     return (
@@ -15,6 +16,7 @@ const App = () => {
             <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/exercise/:id" element={<ExerciseDetail />} />
+                <Route path="/auth" element={<Auth />} />
             </Routes>
             <Footer />
         </Box>
