@@ -7,7 +7,7 @@ import {exerciseOptions, fetchData} from "../utils/fetchData";
 
 const Exercises = ({ exercises, setExercises, bodyPart }) => {
     const [currentPage, setCurrentPage] = useState(1);
-    const exercisesPerPage = 10;
+    const exercisesPerPage = 9;
 
     const indexOfLastExercise = currentPage * exercisesPerPage;
     const indexOfFirstExercise = indexOfLastExercise - exercisesPerPage;
@@ -41,7 +41,7 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
              mt="50px"
              p="20px"
         >
-            <Typography variant="h3" mb="46px">
+            <Typography variant="h3" mb="46px" fontWeight={325}>
                 Showing Results
             </Typography>
             <Stack direction="row" sx={{gap: {lg: '110px', xs: '50px'}}}
@@ -50,11 +50,11 @@ const Exercises = ({ exercises, setExercises, bodyPart }) => {
                     <ExerciseCard key={index} exercise={exercise}/>
                 ))}
             </Stack>
-            <Stack mt="100px" alignItems="center">
-                {exercises.length > 10 && (
+            <Stack mt="50px" alignItems="center">
+                {exercises.length > 8 && (
                     <Pagination
+                        variant="outlined"
                         color="standard"
-                        shape="rounded"
                         defaultPage={1}
                         count={Math.ceil(exercises.length / exercisesPerPage)}
                         page={currentPage}
